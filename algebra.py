@@ -1,0 +1,53 @@
+import numpy as np
+
+# --- VECTORS ---
+v1 = np.array([1, 2, 3])
+v2 = np.array([4, 5, 6])
+
+print("Vector v1:", v1)
+print("Vector v2:", v2)
+
+# Vector addition and subtraction
+print("v1 + v2 =", v1 + v2)
+print("v1 - v2 =", v1 - v2)
+
+# Scalar multiplication
+print("3 * v1 =", 3 * v1)
+
+# Dot product
+dot = np.dot(v1, v2)
+print("Dot product (v1 · v2):", dot)
+
+# Cross product
+cross = np.cross(v1, v2)
+print("Cross product (v1 × v2):", cross)
+
+print("\n--- MATRICES ---")
+# --- MATRICES ---
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[2, 0], [1, 3]])
+
+print("Matrix A:\n", A)
+print("Matrix B:\n", B)
+
+# Matrix addition
+print("A + B:\n", A + B)
+
+# Matrix multiplication
+print("A × B:\n", np.matmul(A, B))
+
+# Transpose
+print("Transpose of A:\n", A.T)
+
+# Determinant
+print("Determinant of A:", np.linalg.det(A))
+
+# Inverse (if exists)
+try:
+    A_inv = np.linalg.inv(A)
+    print("Inverse of A:\n", A_inv)
+except np.linalg.LinAlgError:
+    print("Matrix A is not invertible.")
+
+# Matrix-vector multiplication
+print("A · v1[:2] =", np.dot(A, v1[:2]))
