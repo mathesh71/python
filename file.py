@@ -22,4 +22,3 @@ with open('data.txt', 'r') as infile, open('output.txt', 'w') as outfile:
             outfile.write(formatted)
 
 print("Finished processing data.")
-

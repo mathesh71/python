@@ -1,26 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm, binom, poisson
-
-# --- 1. BASIC PROBABILITY SIMULATION ---
-print("=== Basic Probability ===")
+print(" Basic Probability")
 np.random.seed(0)
-
-# Simulate 10 coin flips
 coin_flips = np.random.choice(['H', 'T'], size=10)
 print("Coin flips:", coin_flips)
-
-# Simulate 10 dice rolls
 dice_rolls = np.random.randint(1, 7, size=10)
 print("Dice rolls:", dice_rolls)
-
-
-# --- 2. DISTRIBUTIONS ---
-print("\n=== Distributions ===")
-
+print("\n Distributions")
 x = np.linspace(-5, 5, 1000)
 normal_dist = norm.pdf(x, loc=0, scale=1)
-
 # Binomial distribution (n=10, p=0.5)
 binomial_dist = binom.pmf(np.arange(0, 11), n=10, p=0.5)
 
@@ -53,7 +42,7 @@ plt.show()
 
 
 # --- 3. BAYES' THEOREM ---
-print("\n=== Bayes' Theorem ===")
+print("\n Bayes' Theorem ")
 # Example:
 # 1% of people have a disease
 # Test is 99% accurate (true positive rate = 0.99, false positive rate = 0.01)
